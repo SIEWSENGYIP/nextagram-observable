@@ -57,7 +57,7 @@ export class UserService {
 
     for (let i=0; i<tempLike.length; i++) {
       if(tempLike[i].userId === like.userId && tempLike[i].imageId === like.imageId) {
-        count = tempLike[i].likeCount
+        count = tempLike[i].likeCount + 1
         tempLike.splice(i, 1)
       }
     }
