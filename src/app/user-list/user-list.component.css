@@ -1,0 +1,17 @@
+.profileImg {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+.profileImg:hover {
+    opacity: 0.5;
+}
+
+.userName {
+    margin: auto;
+    display: block;
+    max-width: 200px;
+    text-align: center;
+  }

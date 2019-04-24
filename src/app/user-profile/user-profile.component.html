@@ -1,0 +1,17 @@
+
+<h4>Edit {{ userName }}'s Profile</h4>
+<div>
+<form [formGroup]="profile" (ngSubmit)="onSubmit()">
+  <label id="profile">Description</label>
+  <input type="text" formControlName="description"/><br>
+  <label id="profile">Blog Link</label>
+  <input type="text" formControlName="blogLink"/><br>
+  <label id="profile">Facebook Link</label>
+  <input type="text" formControlName="facebookLink"/><br>
+  <label id="profile">Email</label>
+  <input type="email" formControlName="email"/>
+  <input type="submit" />
+  <input type="hidden" formControlName="id"/><br>
+  <input type="hidden"  formControlName="name"/><br>
+</form>
+</div>

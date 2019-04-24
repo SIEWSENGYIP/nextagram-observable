@@ -1,0 +1,14 @@
+<div id="topnav">
+</div>
+<div id="container">
+  <div *ngFor="let user of getUserList()">
+    <a routerLink="/user/{{ user.id }}/{{ user.username }}">
+      <div>
+        <img class="profileImg" src= "{{ user.profileImage }}">
+      </div>
+      <div class="userName">
+        {{ user.username }}
+      </div>
+    </a>
+  </div>
+</div>

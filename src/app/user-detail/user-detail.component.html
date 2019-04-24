@@ -1,0 +1,41 @@
+  <a routerLink="/">
+      <button>Home</button>
+    </a>
+    
+    <h4>{{ userName }}'s Profile</h4>
+    
+
+    <div *ngIf="profileById.length > 0">
+      <div *ngFor="let profile of profileById">
+        <ul>
+          <li>Name: {{ profile.name }}</li>
+          <li>Description: {{ profile.description }}</li>
+          <li>Blog Link: {{ profile.blogLink }}</li>
+          <li>Facebook Link: {{ profile.facebookLink }}</li>
+          <li>Email: {{ profile.email }}</li>
+        </ul>
+      </div>
+    </div>
+    <div *ngIf="profileById.length === 0">
+      <ul>
+        <li>Name: {{ userName }}</li>
+        <li>Description:</li>
+        <li>Blog Link:</li>
+        <li>Facebook Link:</li>
+        <li>Email:</li>
+      </ul>
+    </div>
+      <a routerLink="/user-profile/{{ userId }}/{{ userName }}">
+        <button>Edit Profile</button>
+      </a>
+    
+    <div *ngIf=" imgs === null">
+      <img id="loadingGIF"  src="../../assets/images/loading.gif">
+    </div>
+    
+    <div id="container">
+        <div *ngFor="let img of imgs; let i = index">
+          <a routerLink="/image-detail/{{ userId }}/{{ i }}"><img class="userImg" src= "{{ img }}"></a>
+        </div>
+    </div>
+

@@ -1,0 +1,25 @@
+
+    <h4>User ID: {{ userId }}</h4>
+    <h4>Image ID: {{ imageId }}</h4>
+    <img class="image" src="{{ showImage() }}">
+   
+    <app-like-page
+    [userId] = "userId"
+    [imageId] = "imageId"></app-like-page>
+
+    <h5 *ngFor="let count of likeCountById">Like: {{ count.likeCount }}</h5>
+
+    <br>
+    <h4>Comments</h4>
+    <br>
+    
+    <div *ngFor="let comment of imageCommentsById">
+        <ul>
+            <li>{{ comment.author}} : {{ comment.comment }}</li>
+        </ul>
+    </div>
+
+    <app-comment-page
+    [userId] = "userId"
+    [imageId] = "imageId" ></app-comment-page>
+

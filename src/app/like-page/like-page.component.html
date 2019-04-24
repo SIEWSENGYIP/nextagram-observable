@@ -1,0 +1,5 @@
+<form [formGroup]="likes" (ngSubmit)="onSubmit()">
+  <input type="submit" value="Like" />
+  <input type="hidden" formControlName="userId"/>
+  <input type="hidden"  formControlName="imageId"/>
+</form>

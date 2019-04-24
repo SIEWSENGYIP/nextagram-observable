@@ -1,0 +1,7 @@
+<form [formGroup]="comments" (ngSubmit)="onSubmit()">       
+  <input type="text" formControlName="comment"/>
+  <input type="submit" /><br>
+  <input type="hidden" formControlName="userId"/>
+  <input type="hidden"  formControlName="imageId"/>
+  <input type="hidden" formControlName="author">
+</form>
